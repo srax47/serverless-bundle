@@ -17,7 +17,6 @@ And all this works without having to install Webpack, Babel, ESLint, esbuild, et
 -    "webpack"
 -    "ts-loader"
 -    "typescript"
--    "css-loader"
 -    "graphql-tag"
 -    "@babel/core"
 -    "babel-eslint"
@@ -54,7 +53,6 @@ You can [read more about this over on the SST Guide](https://sst.dev/chapters/pa
   - [TypeScript](#typescript)
   - [Package Specific Config](#package-specific-config)
   - [Nested Services](#nested-services)
-  - [CSS and SASS Files](#css-and-sass-files)
   - [Support for pem, txt, and other raw files](#support-for-pem-txt-and-other-raw-files)
   - [Externals](#externals)
   - [Externals vs forceExclude](#externals-vs-forceexclude)
@@ -385,15 +383,6 @@ And in `service1/package.json` use this `test` script:
 ```
 
 This tells serverless-bundle (in the root) to only run the tests inside the `service1/` directory. As opposed to the entire project.
-
-### CSS and SASS Files
-
-Serverless Bundle automatically supports importing css and scss using the [isomorphic-style-loader](https://github.com/kriasoft/isomorphic-style-loader).
-
-``` js
-import "./assets/style.css";
-import "./assets/style.scss";
-```
 
 ### Support for pem, txt, and other raw files
 

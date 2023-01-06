@@ -211,36 +211,6 @@ function loaders() {
         exclude: /node_modules/,
         loader: "graphql-tag/loader",
       },
-      {
-        test: /\.css$/,
-        use: [
-          "isomorphic-style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.s[ac]ss$/i,
-        use: [
-          "isomorphic-style-loader",
-          {
-            loader: "css-loader",
-            options: {
-              importLoaders: 1,
-            },
-          },
-          {
-            loader: "sass-loader",
-            options: {
-              implementation: require("sass"),
-            },
-          },
-        ],
-      },
       { test: /\.gif|\.svg|\.png|\.jpg|\.jpeg$/, loader: "ignore-loader" },
     ],
   };
